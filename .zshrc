@@ -16,7 +16,6 @@ export PATH=$PATH:$SCALA_HOME
 export SBT_HOME=~/sbt/bin
 export PATH=$PATH:$SBT_HOME
 
-
 #
 # general settings
 #
@@ -25,7 +24,7 @@ export LANG=ja_JP.UTF-8
 autoload -U compinit
 compinit
 
-PROMPT='%m:%c$ '
+PROMPT='[%n@%m %c]$ '
 
 # history
 export HISTFILE=~/.zsh_history
