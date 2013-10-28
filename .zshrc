@@ -1,6 +1,9 @@
 #
 # path
 #
+export MY_BIN_HOME=~/.bin
+export PATH=$PATH:$MY_BIN_HOME
+
 export ANDROID_HOME=/Applications/android-sdk-macosx/tools
 export PATH=$PATH:$ANDROID_HOME
 
