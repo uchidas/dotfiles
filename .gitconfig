@@ -1,0 +1,7 @@
+[user]
+	name = y.uchiyama
+	email = yosuke.u0710@gmail.com
+[color]
+	ui = true
+[core]
+	editor = /usr/bin/vim
