@@ -5,7 +5,13 @@ dotfiles
 
 1. delete or move local dotfiles.
 2. exexctue setup.sh  
+````
     sh setup.sh
+````
+3. source .zshrc  
+````
+    source .zshrc
+````
 
 ## to do
 * 各端末ごとの設定の切り分け  
