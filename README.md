@@ -4,7 +4,7 @@ dotfiles
 ## installation
 
 1. delete or move local dotfiles.
-2. exexctue setup.sh  
+2. exectue setup.sh  
 ````
     sh setup.sh
 ````
@@ -18,3 +18,5 @@ dotfiles
  .zshrc.local
 
 * .vimrcを設定ごとに切り分け
+
+* vimでのmarkdown環境
