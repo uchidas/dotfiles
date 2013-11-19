@@ -18,9 +18,14 @@ dotfiles
 ````
 
 ## to do
-* 各端末ごとの設定の切り分け  
- .zshrc.local
+* .zshrcを設定ごとに切り分け
 
 * .vimrcを設定ごとに切り分け
 
-* vimでのmarkdown環境
+* vimでの各環境の作成
+    - java
+    - html
+    - css
+    - js
+    - bash
+    - markdown
