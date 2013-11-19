@@ -49,3 +49,6 @@ alias java='java -Dfile.encoding=UTF-8'
 alias ll='ls -lh'
 alias la='ls -lha'
 alias ls='ls -G'
+
+# import local zshrc
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
