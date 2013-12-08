@@ -1,3 +1,8 @@
+" release autogroup in MyAutoCmd
+augroup MyAutoCmd
+   autocmd!
+augroup END
+
 " NeoBundle Configure
 "
 "
@@ -13,7 +18,13 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Recommended to install
 " After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
-NeoBundle 'Shougo/vimproc'
+NeoBundle 'Shougo/vimproc',{
+    \ 'build': {
+    \ 'windows' : 'make -f make_mingw32.mak',
+    \ 'cygwin' : 'make -f make_cygwin.mak',
+    \ 'mac' : 'make -f make_mac.mak',
+    \ 'unix' : 'make -f make_unix.mak',
+    \ }}
 
 " My Bundles here:
 "
@@ -23,8 +34,47 @@ NeoBundle 'Shougo/vimproc'
 NeoBundle 'altercation/vim-colors-solarized'
 
 " contents assist
-NeoBundle 'Shougo/neocomplcache'
+" load on insert mode
+NeoBundleLazy 'Shougo/neocomplcache.vim', {
+    \ 'autoload' :  {'insert': 1}}
+let s:hooks = neobundle#get_hooks('neocomplcache.vim')
 
+function! s:hooks.on_source(bundle)
+    let g:neocomplcache_enable_at_startup = 1
+endfunction
+
+NeoBundleLazy 'Shougo/unite.vim', {
+    \ 'autoload' : {
+    \   'commands':['Unite', 'UniteWithBufferDir']
+    \ }}
+
+NeoBundleLazy 'h1mesuke/unite-outline', {
+    \ 'autoload' : {
+    \   'unite_sources' : ['outline'],
+    \ }}
+let s:hooks = neobundle#get_hooks('unite.vim')
+
+function! s:hooks.on_source(bundle)
+    " start unite in insert mode
+    let g:unite_enable_start_insert = 1
+endfunction
+
+NeoBundleLazy 'Shougo/vimfiler', {
+      \ 'depends': ['Shougo/unite.vim'],
+      \ 'autoload': {
+      \   'commands': ['VimFilerTab', 'VimFiler', 'VimFilerExplorer'],
+      \   'mappings': ['<Plug>(vimfiler_switch)'],
+      \   'explorer': 1,
+      \ }}
+let s:hooks = neobundle#get_hooks('vimfiler')
+
+function! s:hooks.on_source(bundle)
+    let g:vimfiler_as_default_explorer = 1
+    let g:vimfiler_enable_auto_cd = 1
+
+    " .から始まるファイルおよび.pycで終わるファイルを不可視パターンに
+    let g:vimfiler_ignore_pattern = '\%(^\..*\|\.pyc$\)'
+endfunction
 
 filetype plugin indent on     " Required!
 "
@@ -56,6 +106,12 @@ let g:neocomplcache_enable_at_startup=1
 set number
 set autoindent
 
+" Swapファイル？Backupファイル？前時代的すぎ
+" " なので全て無効化する
+set nowritebackup
+set nobackup
+set noswapfile
+
 " エンコード
 set encoding=utf8
 " ファイルエンコード
@@ -63,7 +119,14 @@ set fileencoding=utf-8
 
 " 不可視文字を表示
 set list
-set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:.,eol:¶
+set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%,eol:¶
+
+if has('unnamedplus')
+    set clipboard+=unnamedplus,unnamed
+else
+    set clipboard+=unnamed
+endif
+
 
 "-------------------------------------------------
 " Indent インデント設定
@@ -94,3 +157,9 @@ set expandtab
 
 " 行頭の余白内で Tab を打ち込むと、'shiftwidth' の数だけインデントする
 set smarttab
+
+" load ~/.vimrc.local
+let s:local_vimrc = expand('~/.vimrc.local')
+if filereadable(s:local_vimrc)
+    execute 'source ' . s:local_vimrc
+endif
