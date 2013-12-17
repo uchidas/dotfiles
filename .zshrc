@@ -50,5 +50,8 @@ alias ll='ls -lh'
 alias la='ls -lha'
 alias ls='ls -G'
 
+# pandoc
+alias pandoc='pandoc -s'
+
 # import local zshrc
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
