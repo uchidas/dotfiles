@@ -4,28 +4,13 @@
 export MY_BIN_HOME=$HOME/dotfiles/bin
 export PATH=$PATH:$MY_BIN_HOME
 
-export ANDROID_HOME=/Applications/android-sdk-macosx/tools
-export PATH=$PATH:$ANDROID_HOME
-
-export PLAY_HOME=~/play
-export PATH=$PATH:$PLAY_HOME
-
-export MYSQL_HOME=/usr/local/mysql/bin
-export PATH=$PATH:$MYSQL_HOME
-
-export SCALA_HOME=~/scala/bin
-export PATH=$PATH:$SCALA_HOME
-
-export SBT_HOME=~/sbt/bin
-export PATH=$PATH:$SBT_HOME
-
 #
 # general settings
 #
 export LANG=ja_JP.UTF-8
 
 autoload -U compinit
-compinit
+compinit -u
 
 PROMPT='[%n@%m %c]$ '
 
