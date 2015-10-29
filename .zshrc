@@ -21,14 +21,13 @@ export SAVEHIST=100000
 setopt hist_ignore_dups
 setopt EXTENDED_HISTORY
 
-# java encoding set UTF-8
-alias javac='javac -J-Dfile.encoding=UTF-8'
-alias java='java -Dfile.encoding=UTF-8'
-
-
 #
 # alias
 #
+
+# java encoding set UTF-8
+alias javac='javac -J-Dfile.encoding=UTF-8'
+alias java='java -Dfile.encoding=UTF-8'
 
 # ls command alias
 alias ll='ls -lh'
