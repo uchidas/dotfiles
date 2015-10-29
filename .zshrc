@@ -29,6 +29,9 @@ setopt EXTENDED_HISTORY
 alias javac='javac -J-Dfile.encoding=UTF-8'
 alias java='java -Dfile.encoding=UTF-8'
 
+# git
+alias gitlog='git log --graph'
+
 # ls command alias
 alias ll='ls -lh'
 alias la='ls -lha'
