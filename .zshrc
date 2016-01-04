@@ -43,5 +43,5 @@ alias pandoc='pandoc -s'
 # import local zshrc
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
-export NVM_DIR="/Users/uchiyama/.nvm"
+export NVM_DIR="/Users/uchidas/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
