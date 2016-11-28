@@ -9,6 +9,10 @@ export PATH=$PATH:$MY_BIN_HOME
 #
 export LANG=ja_JP.UTF-8
 
+if [ -e /usr/local/share/zsh-completions ]; then
+    fpath=(/usr/local/share/zsh-completions $fpath)
+fi
+
 autoload -U compinit
 compinit -u
 
