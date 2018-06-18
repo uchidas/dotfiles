@@ -29,5 +29,3 @@ dotfiles
     - js
     - bash
     - markdown
-
-* テスト
