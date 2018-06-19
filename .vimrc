@@ -129,6 +129,9 @@ else
     set clipboard+=unnamed
 endif
 
+" マウス操作を有効に
+set mouse=a
+set ttymouse=xterm2
 
 "-------------------------------------------------
 " Indent インデント設定
