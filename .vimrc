@@ -120,8 +120,11 @@ set encoding=utf8
 set fileencoding=utf-8
 
 " 不可視文字を表示
-set list
-set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%,eol:¶
+"set list
+"set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%,eol:¶
+
+" insert時にbackspaceを有効に
+set backspace=indent,eol,start
 
 if has('unnamedplus')
     set clipboard+=unnamedplus,unnamed
