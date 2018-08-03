@@ -126,7 +126,7 @@ module.exports = {
     summon: {
       hideDock: false,
       hideOnBlur: false,
-      hotkey: 'F5'
+      hotkey: 'F6'
     },
     paneNavigation: {
       debug: false,
