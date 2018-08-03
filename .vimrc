@@ -32,7 +32,7 @@ NeoBundle 'Shougo/vimproc', {
 " Note: You don't set neobundle setting in .gvimrc!
 " Original repos on github
 " color scheme
-NeoBundle 'altercation/vim-colors-solarized'
+
 
 " contents assist
 " load on insert mode
@@ -92,16 +92,6 @@ call neobundle#end()
 " todo .vim配下に各まとまりごとに記述する
 " user Configure
 syntax enable
-set background=dark
-let g:solarized_termcolors=256
-let g:solarized_degrade=0
-let g:solarized_bold=1
-let g:solarized_underline=1
-let g:solarized_italic=1
-let g:solarized_termtrans=1
-let g:solarized_contrast="high"
-let g:solarized_visibility="high"
-colorscheme solarized
 
 let g:neocomplcache_enable_at_startup=1
 
@@ -150,14 +140,14 @@ set autoindent
 set smartindent
 
 " <Tab> が対応する空白の数。
-set tabstop=4
+set tabstop=2
 
 " <Tab> の挿入や <BS> の使用等の編集操作をするときに、<Tab>
 " が対応する空白の数。
-set softtabstop=4
+set softtabstop=2
 
 " インデントの各段階に使われる空白の数
-set shiftwidth=4
+set shiftwidth=2
 
 " Insertモードで <Tab>
 " を挿入するとき、代わりに適切な数の空白を使う。（有効:expandtab/無効:noexpandtab）
