@@ -123,11 +123,6 @@ module.exports = {
     // bellSoundURL: 'http://example.com/bell.mp3',
 
     // for advanced config flags please refer to https://hyper.is/#cfg
-    verminal: {
-      fontSize: 14,
-      fontFamily: 'Yutapon-coding-Regular',
-    },
-
     summon: {
       hideDock: false,
       hideOnBlur: false,
@@ -167,7 +162,12 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ["verminal", "hyper-pane", "hyperterm-summon", "hypercwd"],
+  plugins: [
+    "hyper-pane",
+    "hyperterm-summon",
+    "hypercwd",
+    "hyper-night-owl"
+  ],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
