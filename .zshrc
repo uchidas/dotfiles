@@ -29,6 +29,9 @@ setopt EXTENDED_HISTORY
 # alias
 #
 
+# vim
+alias vi='vim'
+
 # java encoding set UTF-8
 alias javac='javac -J-Dfile.encoding=UTF-8'
 alias java='java -Dfile.encoding=UTF-8'

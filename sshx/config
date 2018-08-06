@@ -1,0 +1,3 @@
+NamespaceSeparator -
+EnableAlias true
+SshPath /usr/bin/ssh
