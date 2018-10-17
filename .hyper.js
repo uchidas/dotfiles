@@ -152,8 +152,11 @@ module.exports = {
       },
       focusOnMouseHover: false,
       inactivePaneOpacity: 0.4 // Set to 1 to disable inactive panes dimming
+    },
+    
+    opacity: {
+      focus: 0.9,
     }
-
   },
 
   // a list of plugins to fetch and install from npm
@@ -166,7 +169,8 @@ module.exports = {
     "hyper-pane",
     "hyperterm-summon",
     "hypercwd",
-    "hyper-night-owl"
+    "hyper-night-owl",
+    "hyper-opacity"
   ],
 
   // in development, you can create a directory under
@@ -177,6 +181,8 @@ module.exports = {
   keymaps: {
     // Example
     // 'window:devtools': 'cmd+alt+o',
+    "window:reload": "",
+    "window:reloadFull": "",
     "tab:next": [
       "command+right",
     ],
