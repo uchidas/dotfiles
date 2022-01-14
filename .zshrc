@@ -32,23 +32,10 @@ setopt EXTENDED_HISTORY
 # vim
 alias vi='vim'
 
-# java encoding set UTF-8
-alias javac='javac -J-Dfile.encoding=UTF-8'
-alias java='java -Dfile.encoding=UTF-8'
-
-# git
-alias gitlog='git log --graph'
-
 # ls command alias
 alias ll='ls -lh'
 alias la='ls -lha'
 alias ls='ls -G'
-
-# pandoc
-alias pandoc='pandoc -s'
-
-export NVM_DIR=~/.nvm
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # import local zshrc
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
