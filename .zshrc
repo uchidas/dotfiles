@@ -13,8 +13,8 @@ if [ -e /usr/local/share/zsh-completions ]; then
     fpath=(/usr/local/share/zsh-completions $fpath)
 fi
 
-autoload -U compinit
-compinit -u
+fpath+=~/.zfunc
+autoload -Uz compinit && compinit
 
 PROMPT='[%n@%m %c]$ '
 
