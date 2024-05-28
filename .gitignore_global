@@ -1,0 +1,21 @@
+#
+# Mac OS
+#
+.DS_Store
+
+#
+# InteliJ
+#
+.idea/
+*.iml
+
+#
+# VSCode
+#
+/*/.vscode
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+!.vscode/*.code-workspace
