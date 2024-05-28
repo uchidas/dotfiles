@@ -20,7 +20,8 @@ set number
 " indent
 set autoindent
 set smartindent
-set listset listchars=tab:»-
+set list
+set listchars=tab:»-
 set tabstop=4
 set softtabstop=2
 set shiftwidth=2
