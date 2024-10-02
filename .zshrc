@@ -3,6 +3,8 @@
 #
 export LANG=ja_JP.UTF-8
 
+PROMPT='[%n@%m %c]$ '
+
 # homebrew
 eval $(/opt/homebrew/bin/brew shellenv)
 
@@ -18,7 +20,8 @@ if type brew &>/dev/null; then
     compinit
 fi
 
-PROMPT='[%n@%m %c]$ '
+autoload bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
 
 # history
 export HISTFILE=$HOME/.zsh_history
