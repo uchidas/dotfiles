@@ -19,3 +19,8 @@
 !.vscode/extensions.json
 !.vscode/*.code-snippets
 !.vscode/*.code-workspace
+
+#
+# Claude
+#
+.claude/settings.local.json
