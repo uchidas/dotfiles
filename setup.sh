@@ -9,13 +9,9 @@ DOT_FILES=(\
 
 for FILE in ${DOT_FILES[@]}
 do
-    if [ -e $HOME/$FILE ]; then
-        echo "$HOME/$FILE already exists. please remove this file."
-        exit 0
+    if [ -e ~/$FILE ]; then
+        echo "~/$FILE already exists. Skipping..."
+    else
+        ln -s ~/dotfiles-local/$FILE ~/$FILE
     fi
-done
-
-for FILE in ${DOT_FILES[@]}
-do
-    ln -s $HOME/dotfiles/$FILE $HOME/$FILE
 done
