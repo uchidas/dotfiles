@@ -1,17 +1,11 @@
-#
 # Mac OS
-#
 .DS_Store
 
-#
 # InteliJ
-#
 .idea/
 *.iml
 
-#
 # VSCode
-#
 /*/.vscode
 .vscode/*
 !.vscode/tasks.json
@@ -20,7 +14,10 @@
 !.vscode/*.code-snippets
 !.vscode/*.code-workspace
 
-#
 # Claude
-#
 .claude/settings.local.json
+.claude/tmp/
+.claude/plans/
+
+#　Git worktree 
+.worktrees/
