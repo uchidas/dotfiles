@@ -14,11 +14,11 @@
 git clone git@github.com:uchidas/dotfiles.git ~/dotfiles
 ```
 
-2. setup-dotfiles スキルを `~/.claude/skills/` にシンボリックリンクする（初回のみ）
+2. setup-dotfiles スキルの `SKILL.md` を `~/.claude/skills/setup-dotfiles/` にシンボリックリンクする（初回のみ）
 
 ```bash
-mkdir -p ~/.claude/skills
-ln -s ~/dotfiles/.claude/skills/setup-dotfiles ~/.claude/skills/setup-dotfiles
+mkdir -p ~/.claude/skills/setup-dotfiles
+ln -s ~/dotfiles/.claude/skills/setup-dotfiles/SKILL.md ~/.claude/skills/setup-dotfiles/SKILL.md
 ```
 
 3. Claude Code を起動し、スキルを実行する

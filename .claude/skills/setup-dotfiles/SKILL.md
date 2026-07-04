@@ -21,6 +21,7 @@ user-invocable: true
 - `.git/`
 - `.gitignore`
 - `README.md`
+- `CLAUDE.md`（リポジトリ直下のみ。リポジトリ用の Claude への指示書のため展開しない）
 
 **実行方法**:
 
@@ -32,7 +33,7 @@ find "$DOTFILES_DIR" -name .git -prune -o -type f -print0 | while IFS= read -r -
 
   # 除外判定
   case "$rel_path" in
-    .git/*|.gitignore|README.md) continue ;;
+    .git/*|.gitignore|README.md|CLAUDE.md) continue ;;
   esac
 
   dest="$HOME/$rel_path"
