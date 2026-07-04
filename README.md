@@ -17,6 +17,7 @@ git clone git@github.com:uchidas/dotfiles.git ~/dotfiles
 2. setup-dotfiles スキルを `~/.claude/skills/` にシンボリックリンクする（初回のみ）
 
 ```bash
+mkdir -p ~/.claude/skills
 ln -s ~/dotfiles/.claude/skills/setup-dotfiles ~/.claude/skills/setup-dotfiles
 ```
 
