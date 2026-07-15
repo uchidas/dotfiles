@@ -16,8 +16,6 @@
 
 # Claude
 .claude/settings.local.json
-.claude/.tmp/
-.claude/.plans/
 
-#　Git worktree 
+#　Git worktree
 .worktrees/
